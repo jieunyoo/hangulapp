@@ -14,7 +14,7 @@ class Config:
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     QUIZ_MAIL_SUBJECT_PREFIX = '[Korean Level Up]'
     QUIZ_MAIL_SENDER = 'Admin <koreanlevelup@gmail.com>'
-    QUIZ_ADMIN = os.environ.get('KOREAN_LEVEL_UP_ADMIN')
+    QUIZ_ADMIN = os.environ.get('QUIZ_ADMIN')
     QUIZ_SLOW_DB_QUERY_TIME=0.5
     QUIZ_POSTS_PER_PAGE = 10
 
