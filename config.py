@@ -40,10 +40,10 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
-    #SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') #or \
      #   'sqlite:///' + os.path.join(basedir, 'data.sqlite')
     
-    SQLALCHEMY_DATABASE_URI = 'postgresql://newuser:jieun@localhost/hangulappdb'
+    #SQLALCHEMY_DATABASE_URI = 'postgresql://newuser:jieun@localhost/hangulappdb'
 
     WTF_CSRF_ENABLED = True
 
