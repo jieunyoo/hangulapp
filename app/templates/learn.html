@@ -1,0 +1,93 @@
+{% extends "base.html" %}
+
+{% import "_macros.html" as mascros %}
+
+{% block page_content %}
+
+<h2 class="text-center"> Practice! </h2>
+<br>
+<br>
+
+<div id="mainContainer" class="container">
+<br>
+<br>
+
+<h2 class="text-center"> Free </h2>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='ball.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.numbers')}}"> Numbers </a></h3></div>
+          </div>
+        </div>
+
+
+
+
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='autumn.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.seasons')}}"> Seasons </a></h3></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+<br>
+<br>
+
+<h2 class="text-center"> Upgraded Membership Required </h2>
+<br>
+<br>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='jindo1.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.pets')}}"> Pets </a></h3></div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='time.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.timequiz')}}"> Time </a></h3></div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='calendar.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.months')}}"> Months of the Year </a></h3></div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='plane.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.transportation')}}"> Transportation </a></h3></div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+{% endblock %}

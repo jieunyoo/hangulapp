@@ -1,0 +1,103 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% import "_macros.html" as macros %}
+
+{% block title %} Koreanlevelup {% endblock %}
+
+
+
+{% block page_content %}
+
+
+ <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-message"> 
+                        <h1> KOREAN LEVEL UP</h1>
+                        <h3> Bring your Korean up to the next level</h3>
+                        <hr class="intro-divider">
+
+                {% if current_user.is_authenticated %}
+                    <h1 class=text-center> Hello {{ current_user.username }} </h1> <br>
+                    <br>
+                    <br>
+                {% else %} 
+                        <br>
+                        <div class="row">
+                            <div class="text-center">
+                            <a class="btn btn-primary btn-lg" href="{{url_for('auth.register') }} " > Sign up </a>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                {% endif %}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+
+
+<div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"> Practice Makes Perfect </h2>
+                    <p class="lead"> Korean Level Up is a web app that quizzes you on Korean vocabulary.</p>
+                </div>
+
+                <div class="col-lg-4 col-lg-offset-2  col-sm-5">
+                <img class="img-responsive" src="{{url_for('static', filename='wind2.jpg') }}"/> 
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-a -->
+
+
+    <div class="content-section-b">
+
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-5 col-lg-offset-1 col-sm-push-6  col-sm-6">
+                    <hr class="section-heading-spacer">
+                    <div class="clearfix"></div>
+                    <h2 class="section-heading"> Start Today</h2>
+                    <p class="lead"> You can test yourself, see your progress, and improve!. </p>
+                </div>
+                <div class="col-lg-5 col-sm-pull-6  col-sm-6">
+
+            <img class="img-responsive" src="{{url_for('static', filename='hangul1.jpg') }}"/> 
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.content-section-b -->
+
+
+
+
+{% endblock %}
+
+
+{% block scripts %}
+{{ super() }}
+{{ pagedown.include_pagedown() }}
+{% endblock %}

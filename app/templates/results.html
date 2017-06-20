@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% import "_macros.html" as macros %}
+
+{% block page_content %}
+<h1 class="text-center"> Results </h1>
+<br>
+
+<h2 class="text-center"> You gained {{score}} points out of {{points}} for a score of {{ ((score/points)*100) | round | int}}%. </h2>
+
+{% endblock %}

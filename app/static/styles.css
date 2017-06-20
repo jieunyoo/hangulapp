@@ -1,0 +1,145 @@
+div.row.extra-top-padding {
+    margin-top: 20%;
+    margin-bottom:20%;
+}
+
+div.row.small-top-padding {
+    margin-top: 2%;
+    margin-bottom:2%;
+}
+div.footer 
+{
+    margin-top:30%;
+    bottom:0;
+    height:60px;
+    width:100%;
+}
+html {
+    height:100%;
+    width:100%;
+}
+div.intro-message {
+    position:relative;
+}
+
+.profile-thumbnail {
+    position: absolute;
+}
+.profile-header {
+    min-height: 260px;
+    margin-left: 280px;
+}
+
+div.pagination {
+    width: 100%;
+    text-align: right;
+    padding: 0px;
+    margin: 0px;
+}
+div.flask-pagedown-preview {
+    margin: 10px 0px 10px 0px;
+    border: 1px solid #e0e0e0;
+    padding: 4px;
+}
+div.flask-pagedown-preview h1 {
+    font-size: 140%;
+}
+div.flask-pagedown-preview h2 {
+    font-size: 130%;
+}
+div.flask-pagedown-preview h3 {
+    font-size: 120%;
+}
+
+body {
+    padding-bottom: 20px;
+}
+div.buttonspace {
+    margin: 5px;
+}
+.my_panel > .panel-body {
+  padding: 0px;
+}
+.my_panel > .panel-body > img {
+  height: 200px;
+}
+.my_panel > .panel-footer {
+  text-align: center;
+}
+
+.member_panel > .panel-body {
+  padding: 10px;
+}
+.member_panel > .panel-body {
+  height: 200px;
+  width: 400px%;
+}
+.member_panel > .panel-footer {
+  text-align: center;
+}
+
+.intro-header {
+    padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
+    padding-bottom: 50px;
+    text-align: center;
+    color: #336BC6;
+    background: url(../img/intro-bg.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.intro-message {
+    position: relative;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.intro-message > h1 {
+    margin: 0;
+    text-shadow: 2px 2px 3px rgba(63,112,191,0.6);
+    font-size: 5em;
+}
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.intro-message > h3 {
+    text-shadow: 2px 2px 3px rgba(63,112,191,0.6);
+}
+
+
+.intro-divider {
+    width: 400px;
+    border-top: 1px solid #f8f8f8;
+    order-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.lead {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.section-heading {
+    margin-bottom: 30px;
+}
+
+.section-heading-spacer {
+    float: left;
+    width: 200px;
+    border-top: 3px solid #e7e7e7;
+}
+
+.content-section-a {
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.content-section-b {
+    padding: 50px 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+

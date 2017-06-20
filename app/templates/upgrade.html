@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% import "_macros.html" as mascros %}
+
+{% block page_content %}
+
+<h2> Membership </h2>
+<br>
+<br>
+
+<div id="mainContainer" class="container">
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="panel panel-default member_panel">
+            <div class="panel-heading"><h3 class="text-center"> Basic </h3></div>
+            <div class="panel-body">
+                <ul>
+                <li> Access to 2 free quizzes.
+                <li> 5 tries for each quiz.
+                </ul>
+            </div>
+            <div class="panel-footer"><h3> Free </h3></div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="panel panel-default member_panel">
+            <div class="panel-heading"><h3 class="text-center"> Upgraded </h3></div>
+            <div class="panel-body">
+                <ul>
+                <li> Access to additional quizzes.
+                <li> Ability to save up to 200 scores and see your progress.
+                <li> Ability to delete past scores.
+                <li> Currently, $2 US for two months of access.
+                </ul>
+            </div>
+            <div class="panel-footer">
+                <form action="{{ url_for('.charge')}}" method = "post">
+                <article>
+                <label> Amount: $2.00 </label>
+                </article>
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button" 
+                    data-key="{{ key }}"
+                    data-description="Membership Fee"
+                    data-amount="200"
+                    data-locale="auto">
+    
+                </script>
+                </form> 
+          </div>
+
+          </div>
+        </div>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+  </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,2 @@
+<p> Question: <a href = "{{ url_for('main.archive', questionid = post.mylink )}}"> {{ post.mylink }}  </a>  
+    <a href="{{ url_for('main.delete', id=post.mylink) }}"><span class="glyphicon glyphicon-remove"> Delete </span></a> </p>

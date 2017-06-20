@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% import "_macros.html" as macros %}
+
+
+{% block page_content %}
+<h1 class="text-center"> all scores </h1>
+
+<br>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th> id </th>
+
+            <th> user_id </th>
+            <th> Score </th>
+            <th> Delete </th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for i in quizscoreslist %}
+        <tr>
+            <td> {{ i.id}} </td>
+
+            <td> {{ i.user_id}} </td>
+            <td> {{ i.quizscore }} </td>
+
+            <td> <a href="{{ url_for('main.delete', id=i.id)}}"> delete quiz grade </a></td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

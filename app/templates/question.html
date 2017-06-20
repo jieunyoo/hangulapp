@@ -1,0 +1,9 @@
+<p>
+<span class="label label-default"> {{ question.category }}</span> 
+<a href= "{{ url_for('main.check', questionid = question.questionid)}}"> {{ question.question }}   </a>
+<div class="buttonspace">
+<a href="{{ url_for('main.star', id=question.questionid) }}" ><span class="glyphicon glyphicon-bookmark"> Save  </span></a></div>
+</p>
+<hr>
+
+
