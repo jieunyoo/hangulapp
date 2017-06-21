@@ -303,7 +303,7 @@ def numbers():
     if user.quizcount is None:
         user.quizcount = 1
     if user.memberlevel == 2:
-        if user.quizcount > 5:
+        if user.quizcount > 20:
             flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
             return redirect(url_for('.user', username=user.username))
         else:
@@ -341,7 +341,7 @@ def seasons():
     if user.quizcount is None:
         user.quizcount = 1
     if user.memberlevel == 2:
-        if user.quizcount > 5:
+        if user.quizcount > 20:
             flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
             return redirect(url_for('.user', username=user.username))
         else:
@@ -380,7 +380,7 @@ def pets():
     if user.quizcount is None:
         user.quizcount = 1
     if user.memberlevel == 2:
-        if user.quizcount > 5:
+        if user.quizcount > 20:
             flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
             return redirect(url_for('.user', username=user.username))
         else:
@@ -420,7 +420,7 @@ def timequiz():
     if user.quizcount is None:
         user.quizcount = 1
     if user.memberlevel == 2:
-        if user.quizcount > 5:
+        if user.quizcount > 20:
             flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
             return redirect(url_for('.user', username=user.username))
         else:
@@ -459,7 +459,7 @@ def months():
     if user.quizcount is None:
         user.quizcount = 1
     if user.memberlevel == 2:
-        if user.quizcount > 5:
+        if user.quizcount > 20:
             flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
             return redirect(url_for('.user', username=user.username))
         else:
@@ -497,7 +497,7 @@ def transportation():
     if user.quizcount is None:
         user.quizcount = 1
     if user.memberlevel == 2:
-        if user.quizcount > 5:
+        if user.quizcount > 20:
             flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
             return redirect(url_for('.user', username=user.username))
         else:
