@@ -82,9 +82,7 @@ div.buttonspace {
     padding-top: 50px; /* If you're making other pages, make sure there is 50px of padding to make sure the navbar doesn't overlap content! */
     padding-bottom: 50px;
     text-align: center;
-    color: #336BC6;
-    background: url(../img/intro-bg.jpg) no-repeat center center;
-    background-size: cover;
+    color: #2C0C65;
 }
 
 .intro-message {
