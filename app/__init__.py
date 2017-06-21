@@ -6,7 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager
 from flask_pagedown import PageDown
 from config import config
-#from flask_sslify import SSLify
+from flask_sslify import SSLify
 import stripe
 
 bootstrap = Bootstrap()
