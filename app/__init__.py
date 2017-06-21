@@ -32,7 +32,7 @@ def create_app(config_name):
     login_manager.init_app(app)
     pagedown.init_app(app)
 
-    #sslify=SSLify(app)
+    sslify=SSLify(app)
     
     stripe.api_key=app.config['STRIPE_SECRET_KEY']
 
