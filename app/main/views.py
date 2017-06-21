@@ -253,15 +253,23 @@ def hangul(category,quizid,questionid):
 #Admin SUBMISSION---------------------------------------------------------------------------------------
 @main.route('/adminscores',methods=['GET'])
 @login_required
-#@admin_required
+@admin_required
 def adminscores():
     quizscoreslist = Quiz.query.order_by(Quiz.id.desc())
     return render_template('adminscores.html', title='adminscores',quizscoreslist=quizscoreslist)
 
 
+@main.route('/adminquestions',methods=['GET'])
+@login_required
+@admin_required
+def adminquestions():
+    quizquestions = Questions.query.all()
+    return render_template('adminquestions.html', title='adminquestions',quizquestions=quizquestions)
+
 
 #try STRIPE _____________________________________________________________________
 @main.route('/charge',methods=['POST'])
+@login_required
 def charge():
     amount = 500
     user = current_user
