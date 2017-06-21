@@ -103,7 +103,7 @@ div.buttonspace {
     border-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
-.intro-message > h3 {
+.intro-message > h1 {
     text-shadow: 2px 2px 3px rgba(63,112,191,0.6);
 }
 
@@ -114,6 +114,12 @@ div.buttonspace {
     order-bottom: 1px solid rgba(0,0,0,0.2);
 }
 
+
+.learn {
+    text-shadow: 2px 2px 3px rgba(63,112,191,0.6);
+
+    color: #808080;
+}
 .lead {
     font-size: 18px;
     font-weight: 400;
