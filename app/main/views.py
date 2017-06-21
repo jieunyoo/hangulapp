@@ -395,21 +395,8 @@ def pets():
             myquizscore=startfirstquiz.quizscore
             return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
     else:
-        if user.quizcount > 4:
-            flash('the free version is limited to 5 quizzes - consider upgrading your membership')
+            flash('please sign up for a membership')
             return redirect(url_for('.index'))
-        else:
-            user.quizcount += 1
-            startfirstquiz = Quiz(author=current_user,quizscore=0,countquestions=0,quizname=category,user_id=user.id)
-            db.session.add(startfirstquiz)
-            db.session.add(user)
-            db.session.commit()
-            firstquestiontoshow=Questions.query.filter_by(category=category).first()
-            questionid=firstquestiontoshow.questionid
-            quizid=startfirstquiz.id
-            myquizscore=startfirstquiz.quizscore
-            return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
-
 
 
 @main.route('/timequiz')
@@ -435,20 +422,8 @@ def timequiz():
             myquizscore=startfirstquiz.quizscore
             return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
     else:
-        if user.quizcount > 4:
-            flash('the free version is limited to 5 quizzes - consider upgrading your membership')
+            flash('please sign up for a membership')
             return redirect(url_for('.index'))
-        else:
-            user.quizcount += 1
-            startfirstquiz = Quiz(author=current_user,quizscore=0,countquestions=0,quizname=category,user_id=user.id)
-            db.session.add(startfirstquiz)
-            db.session.add(user)
-            db.session.commit()
-            firstquestiontoshow=Questions.query.filter_by(category=category).first()
-            questionid=firstquestiontoshow.questionid
-            quizid=startfirstquiz.id
-            myquizscore=startfirstquiz.quizscore
-            return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
 
 
 @main.route('/months')
@@ -474,20 +449,8 @@ def months():
             myquizscore=startfirstquiz.quizscore
             return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
     else:
-        if user.quizcount > 4:
-            flash('the free version is limited to 5 quizzes - consider upgrading your membership')
+            flash('please sign up for a membership')
             return redirect(url_for('.index'))
-        else:
-            user.quizcount += 1
-            startfirstquiz = Quiz(author=current_user,quizscore=0,countquestions=0,quizname=category,user_id=user.id)
-            db.session.add(startfirstquiz)
-            db.session.add(user)
-            db.session.commit()
-            firstquestiontoshow=Questions.query.filter_by(category=category).first()
-            questionid=firstquestiontoshow.questionid
-            quizid=startfirstquiz.id
-            myquizscore=startfirstquiz.quizscore
-            return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
 
 @main.route('/transportation')
 @login_required
@@ -512,17 +475,5 @@ def transportation():
             myquizscore=startfirstquiz.quizscore
             return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
     else:
-        if user.quizcount > 4:
-            flash('the free version is limited to 5 quizzes - consider upgrading your membership')
+            flash('please sign up for a membership')
             return redirect(url_for('.index'))
-        else:
-            user.quizcount += 1
-            startfirstquiz = Quiz(author=current_user,quizscore=0,countquestions=0,quizname=category,user_id=user.id)
-            db.session.add(startfirstquiz)
-            db.session.add(user)
-            db.session.commit()
-            firstquestiontoshow=Questions.query.filter_by(category=category).first()
-            questionid=firstquestiontoshow.questionid
-            quizid=startfirstquiz.id
-            myquizscore=startfirstquiz.quizscore
-            return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
