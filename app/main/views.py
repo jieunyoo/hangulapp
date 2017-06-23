@@ -271,7 +271,7 @@ def adminquestions():
 @main.route('/charge',methods=['POST'])
 @login_required
 def charge():
-    amount = 500
+    amount = 200
     user = current_user
     useremail = user.email
     customer = stripe.Customer.create(
