@@ -14,7 +14,7 @@
 <br>
 
 <h2 > Free </h2>
-<br>
+
   <div class="panel panel-default">
     <div class="panel-body">
       <div class="row">
@@ -91,4 +91,30 @@
   </div>
 
 
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <div class="row">
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='weekdays.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.weekdays')}}"> Weekdays </a></h3></div>
+          </div>
+        </div>
+
+
+        <div class="col-md-3">
+          <div class="panel panel-default my_panel">
+            <div class="panel-body"><img class="img-responsive" src="{{url_for('static', filename='apple.jpg')}}"/></div>
+            <div class="panel-footer"><h3><a href="{{url_for('main.fruit')}}"> Fruit </a></h3></div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
 {% endblock %}
