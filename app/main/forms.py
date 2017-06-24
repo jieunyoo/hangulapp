@@ -58,7 +58,7 @@ class SubmitForm(FlaskForm):
     option3 = TextAreaField('C', validators=[DataRequired()])
     option4 = TextAreaField('D', validators=[DataRequired()])
     category = RadioField('category', 
-        choices=[('numbers', 'numbers'), ('seasons', 'seasons'), ('pets', 'pets'),('months', 'months'), ('time', 'time'),('transportation', 'transportation')], validators = [DataRequired()])
+        choices=[('numbers', 'numbers'), ('seasons', 'seasons'), ('pets', 'pets'),('months', 'months'), ('time', 'time'),('transportation', 'transportation'), ('fruit', 'fruit'), ('weekdays', 'weekdays')], validators = [DataRequired()])
     answer = RadioField('answer', 
         choices=[('option1', 'A'), ('option2', 'B'), ('option3', 'C'), ('option4', 'D')],
         validators = [DataRequired()])
@@ -81,7 +81,7 @@ class EditForm(FlaskForm):
     option4 = TextAreaField('D', validators=[DataRequired()])
 
     category = RadioField('category', 
-        choices=[('numbers', 'numbers'), ('seasons', 'seasons'), ('pets', 'pets'), ('months', 'months'), ('time', 'time'),('transportation', 'transportation')], validators = [DataRequired()])
+        choices=[('numbers', 'numbers'), ('seasons', 'seasons'), ('pets', 'pets'), ('months', 'months'), ('time', 'time'),('transportation', 'transportation'), ('fruit', 'fruit'), ('weekdays', 'weekdays')], validators = [DataRequired()])
     answer = RadioField('answer', 
         choices=[('option1', 'A'), ('option2', 'B'), ('option3', 'C'), ('option4', 'D')],
         validators = [DataRequired()])
