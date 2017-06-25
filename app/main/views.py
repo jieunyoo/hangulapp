@@ -532,3 +532,58 @@ def weekdays():
     else:
             flash('please sign up for a membership')
             return redirect(url_for('.index'))
+
+
+
+@main.route('/money')
+@login_required
+def money():
+    category='money'
+    user = current_user
+    if user.quizcount is None:
+        user.quizcount = 1
+    if user.memberlevel == 2:
+        if user.quizcount > 20:
+            flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
+            return redirect(url_for('.user', username=user.username))
+        else:
+            user.quizcount += 1
+            startfirstquiz = Quiz(author=current_user,quizscore=0,countquestions=0,quizname=category,user_id=user.id)
+            db.session.add(startfirstquiz)
+            db.session.add(user)
+            db.session.commit()
+            firstquestiontoshow=Questions.query.filter_by(category=category).first()
+            questionid=firstquestiontoshow.questionid
+            quizid=startfirstquiz.id
+            myquizscore=startfirstquiz.quizscore
+            return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
+    else:
+            flash('please sign up for a membership')
+            return redirect(url_for('.index'))
+
+
+@main.route('/colors')
+@login_required
+def colors():
+    category='colors'
+    user = current_user
+    if user.quizcount is None:
+        user.quizcount = 1
+    if user.memberlevel == 2:
+        if user.quizcount > 20:
+            flash('sorry, you can only attempt & save 5 quiz scores - but, if you delete some past quiz scores, you may continue')
+            return redirect(url_for('.user', username=user.username))
+        else:
+            user.quizcount += 1
+            startfirstquiz = Quiz(author=current_user,quizscore=0,countquestions=0,quizname=category,user_id=user.id)
+            db.session.add(startfirstquiz)
+            db.session.add(user)
+            db.session.commit()
+            firstquestiontoshow=Questions.query.filter_by(category=category).first()
+            questionid=firstquestiontoshow.questionid
+            quizid=startfirstquiz.id
+            myquizscore=startfirstquiz.quizscore
+            return redirect(url_for('.hangul',quizid=quizid,questionid=questionid,category=category))
+    else:
+            flash('please sign up for a membership')
+            return redirect(url_for('.index'))
