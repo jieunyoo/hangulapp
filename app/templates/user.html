@@ -52,10 +52,8 @@
             <th> Category </th>
             <th> Score </th>
 
-            {% if user.memberlevel == 2 %}
 
             <th> Option </th>
-            {% endif %}
         </tr>
     </thead>
 
@@ -74,9 +72,7 @@
                 </td>
 
             
-            {% if user.memberlevel == 2 %}
             <td> <a href="{{ url_for('main.delete', id=i.id)}}"> delete this score </a></td>
-            {% endif %}
         </tr>
 
             {% endif %}
