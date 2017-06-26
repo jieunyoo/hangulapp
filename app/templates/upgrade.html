@@ -34,12 +34,15 @@
             <div class="panel-body">
                 <ul>
                 <li> Access to additional quizzes.
-                <li> Ability to save up to 20 scores and see your progress.
-                <li> Unlimited ability to delete your past scores.
+                <li> Ability to save up to 200 scores and see your progress.
+                <li> Ability to delete past scores.
                 <li> Currently, $2 US for two months of access.
                 </ul>
             </div>
+
             <div class="panel-footer">
+
+                {% if current_user.is_authenticated %}
                 <form action="{{ url_for('.charge')}}" method = "post">
                 <article>
                 <label> Amount: $2.00 </label>
@@ -52,7 +55,13 @@
     
                 </script>
                 </form> 
+
+          {% else %}
+          <h3><a href="{{ url_for('auth.login') }}"> Sign in to upgrade</a></h3>
+          {% endif %}
           </div>
+
+
 
           </div>
         </div>
