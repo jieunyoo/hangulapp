@@ -169,21 +169,21 @@ def results(quizid):
 def delete(id):
     user = current_user
     userid = user.id
-    if user.memberlevel == 2:
-        quizid = Quiz.query.filter_by(id=id).first()
+    #if user.memberlevel == 2:
+    quizid = Quiz.query.filter_by(id=id).first()
         #protects against random users deleting other user's things
-        if userid == quizid.user_id:
-            if user.quizcount:
-                user.quizcount -= 1
-                db.session.delete(quizid)
-                db.session.add(user)
-                db.session.commit()
-                flash('The quiz grade was deleted.')
-        else:
-            flash('error')
-        return redirect(url_for('.user',username=user.username))
+    if userid == quizid.user_id:
+        if user.quizcount:
+            user.quizcount -= 1
+            db.session.delete(quizid)
+            db.session.add(user)
+            db.session.commit()
+            flash('The quiz grade was deleted.')
     else:
-        return redirect(url_for('.user', username=user.username))
+        flash('error')
+    return redirect(url_for('.user',username=user.username))
+    #else:
+      #  return redirect(url_for('.user', username=user.username))
 
 @main.route('/learn', methods=['GET'])
 def learn():
